@@ -324,7 +324,9 @@
 
             security.polkit = {
               enable = true;
-              debug = true;
+
+              # Override the default `["--no-debug" "--log-level=notice"]`.
+              extraArgs = ["--log-level=debug"];
 
               # Log authorization checks.
               extraConfig = ''
