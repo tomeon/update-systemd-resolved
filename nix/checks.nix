@@ -247,10 +247,10 @@
 
             services.resolved = {
               enable = true;
-              dnssec = "false"; # overridden for VPN interface
-              extraConfig = ''
-                MulticastDNS=no
-              '';
+              settings.Resolve = {
+                DNSSEC = false; # overridden for VPN interface
+                MulticastDNS = false;
+              };
             };
 
             users.users.openvpn = {
