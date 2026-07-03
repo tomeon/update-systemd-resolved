@@ -94,7 +94,7 @@
         // (lib.optionalAttrs (sc ? "Group") {group = sc.Group;})
         // {inherit pkgs lib;};
     in
-      pkgs.nixosTest {
+      pkgs.testers.nixosTest {
         inherit name;
 
         nodes = {
@@ -247,15 +247,15 @@
 
             services.resolved = {
               enable = true;
-              dnssec = "false"; # overridden for VPN interface
-              extraConfig = ''
-                MulticastDNS=no
-              '';
+              settings.Resolve = {
+                DNSSEC = false; # overridden for VPN interface
+                MulticastDNS = false;
+              };
             };
 
             users.users.openvpn = {
               description = "openvpn client user";
-              shell = "${pkgs.utillinux}/bin/nologin";
+              shell = "${pkgs.util-linux or pkgs.utillinux}/bin/nologin";
               isSystemUser = true;
               group = "network";
             };
@@ -324,7 +324,9 @@
 
             security.polkit = {
               enable = true;
-              debug = true;
+
+              # Override the default `["--no-debug" "--log-level=notice"]`.
+              extraArgs = ["--log-level=debug"];
 
               # Log authorization checks.
               extraConfig = ''

@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+### BUG FIXES
+
+- Added the polkit action IDs `org.freedesktop.resolve1.{flush-caches,reset-server-features,reset-statistics}`
+  to the list of actions allowed for the user running the OpenVPN client.  The
+  absence of these actions previously led to failures calling the relevant
+  D-Bus methods under configurations that enabled cache flushes, server feature
+  resets, or statistics resets.
+
 ## 2.0.0 (2025.03.23)
 
 ### IMPROVEMENTS

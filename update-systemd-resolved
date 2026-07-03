@@ -320,7 +320,7 @@ _up() {
 
   # This function is called indirectly below (via `each_dhcp_setting`); disable
   # check for unreachable commands.
-  # shellcheck disable=SC2317
+  # shellcheck disable=SC2329
   _dispatch_dhcp_setting() {
     local setting_type="${1?}"
     local setting_value="${2?}"
@@ -779,7 +779,7 @@ each_ip_expansion_func() {
     # messages about (say) not being able to find the `python` or `sipcalc`
     # programs.
     # `log` is called indirectly; disable warning about unreachable command.
-    # shellcheck disable=SC2317
+    # shellcheck disable=SC2329
     if (
       log() { :; }
       "test_${type}_expansion_func" "$expansion_func_impl"
@@ -838,7 +838,7 @@ set_up_ip_expansion_func() {
   if ! declare -f "$expansion_func" &> /dev/null; then
     # This function is called indirectly below (via `each_ip_expansion_func`);
     # disable check for unreachable commands.
-    # shellcheck disable=SC2317
+    # shellcheck disable=SC2329
     choose_expansion_func_impl() {
       expansion_func_impl="$1"
 
@@ -1421,7 +1421,10 @@ const updateSystemdResolved = {
     "set-dns-over-tls",
     "set-dnssec",
     "set-dnssec-negative-trust-anchors",
-    "revert"
+    "revert",
+    "flush-caches",
+    "reset-server-features",
+    "reset-statistics"
   ]),
 
   actionIsAllowed: function(action) {

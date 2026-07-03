@@ -67,7 +67,7 @@
       # `make test`.
       doCheck = true;
 
-      PREFIX = placeholder "out";
+      env.PREFIX = placeholder "out";
 
       # Rewrite update-systemd-resolved.conf to replace the preset path to
       # update-systemd-resolved with the Nix store path of the
