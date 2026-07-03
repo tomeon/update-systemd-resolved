@@ -94,7 +94,7 @@
         // (lib.optionalAttrs (sc ? "Group") {group = sc.Group;})
         // {inherit pkgs lib;};
     in
-      pkgs.nixosTest {
+      pkgs.testers.nixosTest {
         inherit name;
 
         nodes = {
