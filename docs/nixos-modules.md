@@ -10,7 +10,10 @@ package
 
 
 *Default:*
-` pkgs.update-systemd-resolved `
+
+```nix
+pkgs.update-systemd-resolved
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -33,7 +36,10 @@ attribute set of (submodule)
 
 
 *Default:*
-` { } `
+
+```nix
+{ }
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -74,7 +80,10 @@ absolute path *(read only)*
 
 
 *Default:*
-` "/nix/store/<hash>-update-systemd-resolved-<name>.conf" `
+
+```nix
+"/nix/store/<hash>-update-systemd-resolved-<name>.conf"
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -96,7 +105,10 @@ boolean
 
 
 *Default:*
-` false `
+
+```nix
+false
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -118,7 +130,10 @@ string
 
 
 *Default:*
-` "‹name›" `
+
+```nix
+"‹name›"
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -142,7 +157,10 @@ boolean
 
 
 *Default:*
-` false `
+
+```nix
+false
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -163,7 +181,10 @@ submodule
 
 
 *Default:*
-` { } `
+
+```nix
+{ }
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -190,7 +211,10 @@ description of this feature\.
 
 
 *Default:*
-` true `
+
+```nix
+true
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -215,13 +239,16 @@ attribute set of ((submodule) or non-empty string convertible to it)
 
 
 *Default:*
-` { } `
+
+```nix
+{ }
+```
 
 
 
 *Example:*
 
-```
+```nix
 {
   "3.4.5.6" = { };
   resolver-the-first = {
@@ -251,7 +278,10 @@ function that evaluates to a(n) string *(read only)*
 
 
 *Default:*
-` <function> `
+
+```nix
+<function>
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -272,7 +302,10 @@ non-empty string
 
 
 *Default:*
-` "‹name›" `
+
+```nix
+"‹name›"
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -296,7 +329,10 @@ null or non-empty string
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -317,7 +353,10 @@ null or 16 bit unsigned integer; between 0 and 65535 (both inclusive)
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -338,7 +377,10 @@ null or non-empty string
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -366,7 +408,10 @@ the global value for ` DNSOverTLS ` configured in ` resolved.conf `\.
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -394,7 +439,10 @@ the global value for ` DNSSEC ` configured in ` resolved.conf `\.
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -419,7 +467,10 @@ list of non-empty string
 
 
 *Default:*
-` [ ] `
+
+```nix
+[ ]
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -443,7 +494,10 @@ null or non-empty string
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -468,7 +522,10 @@ description of this feature\.
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -496,7 +553,10 @@ the global value for ` LLMNR ` configured in ` resolved.conf `\.
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -524,7 +584,10 @@ the global value for ` MulticastDNS ` configured in ` resolved.conf `\.
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -549,7 +612,10 @@ description of this feature\.
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -575,7 +641,10 @@ description of this feature\.
 
 
 *Default:*
-` null `
+
+```nix
+null
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -600,7 +669,10 @@ list of non-empty string
 
 
 *Default:*
-` [ ] `
+
+```nix
+[ ]
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
@@ -625,7 +697,10 @@ list of non-empty string
 
 
 *Default:*
-` [ ] `
+
+```nix
+[ ]
+```
 
 *Declared by:*
  - [nix/nixos-modules\.nix](/nix/nixos-modules.nix)
