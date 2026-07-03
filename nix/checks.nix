@@ -255,7 +255,7 @@
 
             users.users.openvpn = {
               description = "openvpn client user";
-              shell = "${pkgs.utillinux}/bin/nologin";
+              shell = "${pkgs.util-linux or pkgs.utillinux}/bin/nologin";
               isSystemUser = true;
               group = "network";
             };
