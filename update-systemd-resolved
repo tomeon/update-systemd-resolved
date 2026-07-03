@@ -1484,7 +1484,7 @@ print_polkit_rules_command_for_current_user() {
   fi
 
   format+='\nPlease see %s for additional details on configuring polkit.\n'
-  args+=('https://github.com/tomeon/update-systemd-resolved/tree/polkit-rules-definition#policykit-rules')
+  args+=('https://github.com/jonathanio/update-systemd-resolved/tree/master#polkit-rules')
 
   # shellcheck disable=SC2059
   printf -- "$format" "${args[@]}"

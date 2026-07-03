@@ -4,6 +4,8 @@
 
 ### BUG FIXES
 
+- Fix the link to the README section on Polkit rules generation to use to the
+  default branch of the official project.
 - Added the polkit action IDs `org.freedesktop.resolve1.{flush-caches,reset-server-features,reset-statistics}`
   to the list of actions allowed for the user running the OpenVPN client.  The
   absence of these actions previously led to failures calling the relevant
